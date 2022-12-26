@@ -12,6 +12,14 @@ var body: some Scene {
         }
     }
 }
+
+struct ContentView: View {
+    @Environment(\.safeAreaInsets) var safeAreaInsets
+    
+    var body: some View {
+        Text("Top safe area inset: \(safeAreaInsets.top)")
+    }
+}
 ```
 
 This wrapper will populate safe area insets inside `safeAreaInsets` environment variable.
