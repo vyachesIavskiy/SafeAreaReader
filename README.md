@@ -5,10 +5,13 @@ This is a simple wrapper to read safe area of iOS app.
 You can wrap any view with `SafeAreaReader` to obtain a safe area of the current context. The best approach is to wrap the main view that is declared inside `<YouAppName>App.swift file`.
 
 ```swift
-var body: some Scene {
-    WindowGroup {
-        SafeAreaReader {
-            ContentView()
+@main
+struct SafeAreaReaderApp: App {
+    var body: some Scene {
+        WindowGroup {
+            SafeAreaReader {
+                ContentView()
+            }
         }
     }
 }
